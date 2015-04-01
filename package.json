@@ -1,0 +1,20 @@
+{
+  "name": "eloquent-js-solutions",
+  "version": "0.0.0",
+  "description": "my solutions to Eloquent Javascript exercises",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "bszulc/eloquent-js-solutions"
+  },
+  "author": "Bronek Szulc",
+  "license": "BSD",
+  "dependencies": {
+    "gulp": "~3.8.11",
+    "gulp-plumber": "~1.0.0",
+    "gulp-jshint": "~1.9.4"
+  }
+}
