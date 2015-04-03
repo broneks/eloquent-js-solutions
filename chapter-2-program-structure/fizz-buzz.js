@@ -14,7 +14,7 @@
   'use strict';
 
   var fizzBuzz = {
-    divBy: function( x, divisor ) {
+    modBy: function( x, divisor ) {
       return x % divisor === 0;
     },
 
@@ -22,13 +22,13 @@
       if ( !this.max ) return;
 
       for ( var i = 1; i <= this.max; i++ ) {
-        if ( this.divBy( i, 3 ) && this.divBy( i , 5 ) ) {
+        if ( this.modBy( i, 3 ) && this.modBy( i , 5 ) ) {
           console.log('FizzBuzz');
         }
-        else if ( this.divBy( i , 3 ) ) {
+        else if ( this.modBy( i , 3 ) ) {
           console.log('Fizz');
         }
-        else if ( this.divBy( i, 5 ) ) {
+        else if ( this.modBy( i, 5 ) ) {
           console.log('Buzz');
         }
         else {
