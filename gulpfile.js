@@ -14,6 +14,7 @@ var jshintConfig = {
 gulp.task('jshint', function() {
   gulp.src([
       './**/*.js',
+      '!./**/*/project-*.js',
       '!./node_modules/**/*.js',
       '!./gulpfile.js'
     ])
@@ -27,6 +28,7 @@ gulp.task('jshint', function() {
 gulp.task('default', function() {
   gulp.watch([
     './**/*.js',
+    '!./**/*.project-*.js',
     '!./node_modules/**/*.js',
     '!./gulpfile.js'
   ], ['jshint']);

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 7 ~ Project: Electronic Life</title>
+</head>
+<body>
+  <script src="project-electronic-life.js"></script>
+  <script src="project-animate-world.js"></script>
+  <script src="artifical-stupidity.js"></script>
+  <script>
+    (function() {
+      //
+      // Simple
+      //
+      // var world = new World( plan, {'#': Wall, 'o': BouncingCritter} );
+
+
+      //
+      // With WallFollowers
+      //
+      /*var plan2 = ["############",
+                   "#     #    #",
+                   "#   ~    ~ #",
+                   "#  ##      #",
+                   "#  ##  o####",
+                   "#          #",
+                   "############"];*/
+
+      // var world = new World( plan2, {'#': Wall, '~': WallFollower, 'o': BouncingCritter});
+
+
+      //
+      // Life-Like World
+      //
+      /*var plan3 = ["############################",
+                   "#####                 ######",
+                   "##   ***                **##",
+                   "#   *##**         **  O  *##",
+                   "#    ***     O    ##**    *#",
+                   "#       O         ##***    #",
+                   "#                 ##**     #",
+                   "#   O       #*             #",
+                   "#*          #**       O    #",
+                   "#***        ##**    O    **#",
+                   "##****     ###***       *###",
+                   "############################"];*/
+
+      // var world = new LifelikeWorld( plan3, {'#': Wall, 'O': PlantEater, '*': Plant} );
+
+
+      //
+      // Artificial Stupidity Exercise (SmartPlantEater)
+      //
+      var plan4 = ["############################",
+                   "#####                 ######",
+                   "##   ***                **##",
+                   "#   *##**         **  O  *##",
+                   "#    ***     O    ##**    *#",
+                   "#       O         ##***    #",
+                   "#                 ##**     #",
+                   "#   O       #*             #",
+                   "#*          #**       O    #",
+                   "#***        ##**    O    **#",
+                   "##****     ###***       *###",
+                   "############################"]
+      
+      var world = new LifelikeWorld( plan4, {'#': Wall, 'O': SmartPlantEater, '*': Plant} );
+
+
+      // Start!
+      animateWorld( world );
+    })();
+  </script>
+</body>
+</html>
